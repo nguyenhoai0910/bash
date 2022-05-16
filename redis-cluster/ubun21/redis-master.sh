@@ -7,10 +7,6 @@
 #varible
 user=`whoami`
 path="/home/$user/redis-cluster-live/"
-echo -n "enter ipmaster / ipslave: "; read ipmaster ipslave;
-echo "ipmaster: $ipmaster , ipslave: $ipslave";
-sleep 3 
-echo "------------------\n"
 echo -n "enter 3 list port master: "; read port1 port2 port3;
 echo "port master: $port1 $port2 $port3"
 sleep 3
