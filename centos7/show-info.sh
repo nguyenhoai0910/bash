@@ -2,6 +2,7 @@
 ############################################
 # Created by: reiji0910
 ############################################
+# des: auto show config when you login centos.
 #save file at /etc/profile.d/show-info.sh
 echo "";
 echo -n "IP: ";  hostname -I;
