@@ -3,6 +3,7 @@
 # Created by: reiji0910
 ############################################
 # save file at /root/add-ipv4.sh
+# des: 2 network card, ens33 ip public, ens34 ip private, i want add ip static for ens34.
 # replace ifcfg-ens34, config ip to your network
 cat /etc/sysconfig/network-scripts/ifcfg-ens34|grep BOOTPROTO
 sed -i s/BOOTPROTO=dhcp/BOOTPROTO=static/g /etc/sysconfig/network-scripts/ifcfg-ens34 &> /dev/null
@@ -16,3 +17,7 @@ GATEWAY=192.168.56.2
 DNS1=8.8.8.8
 EOM
 systemctl restart network &> /dev/null
+echo "";
+echo -n "IP: ";  hostname -I;
+echo -n "Hostname: "; hostname;
+echo "-------------------------"
