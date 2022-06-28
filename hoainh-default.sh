@@ -1,7 +1,6 @@
 #!/bin/sh
 ############################################
-# Name: hoainh-default.sh
-#
-# Created by: hoainh@
+# Created by: reiji0910
 ############################################
-
+#des:
+#save file at /root/
