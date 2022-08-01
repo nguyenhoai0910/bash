@@ -22,7 +22,4 @@ GATEWAY=192.168.56.2
 DNS1=8.8.8.8
 EOM
 systemctl restart network &> /dev/null
-echo "";
-echo -n "IP: ";  hostname -I;
-echo -n "Hostname: "; hostname;
-echo "-------------------------"
+
