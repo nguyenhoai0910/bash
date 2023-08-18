@@ -1,0 +1,18 @@
+# This is the network config written by 'subiquity'
+network:
+  ethernets:
+  # This is th network to internet
+    ens33:
+      dhcp4: true
+      gateway4: 192.168.153.2
+  # This is th network to local vm to vm 
+    ens34:
+      dhcp4: false
+      addresses:
+        - 10.99.128.15/16
+  # This is th network to vm to server.
+    ens37:
+      dhcp4: false
+      addresses:
+        - 10.0.0.16/24
+  version: 2
