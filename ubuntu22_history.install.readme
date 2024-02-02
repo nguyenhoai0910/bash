@@ -1,0 +1,35 @@
+#edit interface network
+   72  vi /etc/netplan/00-installer-config.yaml
+#update interface network
+   74  netplan apply
+   75  ip a
+#install nodejs npm
+   81  apt install nodejs
+   82  apt install npm
+   83  apt-get update  --fix-missing
+   84  apt install npm
+   85  npm -a
+# install docker docker-plugin docker-compose
+   86  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   87  sudo apt-get install ca-certificates curl gnupg
+   88  echo   "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   89  sudo apt-get update
+   90  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+#start docker and autostart docker
+   91  sudo service docker start
+   92  sudo service docker status
+   93  sudo service docker enable
+   94  systemctl docker enable
+   95  systemctl enable docker
+   96  docker-compose -v
+   97  apt install doccker-compose
+   98  apt install docker-compose
+   99  docker-compose -v
+#install share window to linux forlder
+  100  apt install cifs-utils
+  101  sudo mkdir /mnt/share_vm
+  102  sudo mount.cifs //10.0.0.17/share_vm /mnt/share_vm -o user=share_vm
+  103  ls
+  104  df -h
+  105  cd /mnt/share_vm
